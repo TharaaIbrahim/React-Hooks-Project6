@@ -1,0 +1,117 @@
+.nav_Bar {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--nav_color);
+  color: var(--primary);
+  font-family: var(--fontSize);
+}
+.Logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+.Logo > img {
+  width: 30%;
+}
+.Logo > label {
+  align-self: center;
+  font-size: 2rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+.cart {
+  color: white;
+  font-size: 1.5rem;
+}
+.nav_List {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.nav_List a {
+  text-decoration: none;
+  color: var(--primary);
+}
+.nav_List > li {
+  padding: 1rem;
+}
+.nav_List > li:hover,
+.nav_Icons i:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.3);
+}
+.nav_Bar > img {
+  width: 10%;
+}
+.nav_Icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav_Icons i {
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.menu {
+  display: none;
+  align-self: center;
+  justify-self: flex-end;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.burger_Menu {
+  display: none;
+  width: 100%;
+  position: relative;
+  background-color: var(--primary);
+}
+.hide_Menu {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: block;
+    width: 10%;
+    margin-left: 1rem;
+  }
+  .nav_List {
+    display: none;
+  }
+  .hide_Menu {
+    display: none;
+  }
+  .burger_Menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    animation-duration: 0.7s;
+    animation-name: showMenu;
+  }
+  @keyframes showMenu {
+    from {
+      margin-top: -5%;
+    }
+
+    to {
+      margin-top: 0%;
+    }
+  }
+  .burger_Menu > li {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #cecccc;
+  }
+  .burger_Menu a {
+    color: var(--nav_color);
+    font-weight: bold;
+  }
+  .nav_Icons {
+    width: 60%;
+    justify-content: left;
+  }
+}

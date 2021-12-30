@@ -1,0 +1,14 @@
+.hero-bg {
+  display: flex;
+  align-items: center;
+  background-image: url(../../../../public/assest/img/homebg.jpg);
+  background-size: cover;
+  background-color: black;
+  height: 88vh;
+  opacity: 1;
+}
+.home-title {
+  color: var(--primary);
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.205);
+}

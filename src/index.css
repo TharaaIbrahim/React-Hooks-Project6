@@ -1,0 +1,28 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+:root {
+  --nav_color: rgb(78, 5, 78);
+  --primary: white;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+button:hover {
+  cursor: pointer;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

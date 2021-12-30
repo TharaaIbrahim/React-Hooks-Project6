@@ -1,0 +1,43 @@
+.login-page {
+  display: grid;
+  grid-template-areas: " img form form ";
+}
+.login-img {
+  grid-area: img/span 1;
+  height: 95vh;
+  margin: 0% auto;
+}
+.Form {
+  grid-area: form/span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10% auto;
+  height: 50vh;
+  padding: 5rem;
+  background-image: linear-gradient(var(--primary), var(--nav_color));
+  box-shadow: 0 4px 8px 0 var(--nav_color);
+}
+.Form > h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.form_Fields {
+  display: flex;
+  flex-direction: column;
+}
+.form_Fields > input {
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
+.form_btn {
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-color: var(--nav_color);
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+}
+.form_btn:hover {
+  background-color: var(--nav_color);
+  color: var(--primary);
+}
