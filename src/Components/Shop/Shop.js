@@ -67,7 +67,7 @@ function Shop() {
           <div className="categories">
             <h3>Categories</h3>
             <ul>
-              <li onClick={() => categoryHandle("")}>All Dresses</li>
+              <li onClick={() => categoryHandle("All dresses")}>All Dresses</li>
               <li onClick={() => categoryHandle("Prom")}>Prom Dresses</li>
               <li onClick={() => categoryHandle("Party")}>Party Dresses</li>
               <li onClick={() => categoryHandle("Evening")}>Evening Dresses</li>
@@ -84,7 +84,7 @@ function Shop() {
           </div>
         </aside>
         <div className="shop">
-          {arrDresses.map((dress) => {
+          {arrDresses.map((dress, id) => {
             return (
               <Card
                 title={dress.title}
@@ -92,7 +92,7 @@ function Shop() {
                 src={dress.img}
                 alt={dress.alt}
                 price={dress.price}
-                key={dress.id}
+                key={id}
                 id={dress.id}
               />
             );

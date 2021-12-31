@@ -1,7 +1,15 @@
 .cart-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+}
+.check-date {
+  width: 20%;
+  height: 63vh;
+  box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
 }
 .dress-info {
   display: flex;

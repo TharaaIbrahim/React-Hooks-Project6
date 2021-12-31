@@ -1,27 +1,25 @@
 .nav_Bar {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   background-color: var(--nav_color);
   color: var(--primary);
   font-family: var(--fontSize);
+  font-size: 1.2em;
 }
 .Logo {
   display: flex;
   flex-direction: row;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 .Logo > img {
   width: 30%;
 }
-.Logo > label {
-  align-self: center;
-  font-size: 2rem;
-  color: var(--primary);
-  cursor: pointer;
-}
+
 .cart {
   color: white;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .nav_List {
   display: flex;
@@ -51,11 +49,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
 }
 .nav_Icons i {
   padding: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-right: 1rem;
 }
 .menu {
   display: none;
@@ -112,6 +112,5 @@
   }
   .nav_Icons {
     width: 60%;
-    justify-content: left;
   }
 }

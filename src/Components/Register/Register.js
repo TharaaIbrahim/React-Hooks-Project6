@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Register.css";
 import { useHistory } from "react-router-dom";
 
-function Registration({ logged, setLogged }) {
+function Registration() {
   const [userData, setUserData] = useState({
     userName: "",
     email: "",
@@ -52,13 +52,11 @@ function Registration({ logged, setLogged }) {
         pathname: "./list",
       });
     }
-    setLogged(true);
   };
   return (
     <div className="register-Form">
-      <h1>Join Us</h1>
+      <h1>Join Us</h1> <h3>Not our registered customer yet? </h3>
       <p>
-        <h3>Not our registered customer yet? </h3>
         While you register,you will be able to rent any dress you like and get
         special discount
       </p>

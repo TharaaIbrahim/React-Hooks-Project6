@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import dresses from "../Shop/dresses.json";
 import "./Cart.css";
 
 function Cart() {
+  const history = useHistory();
   const dressID = localStorage.getItem("selectedDress");
+  const logged = localStorage.getItem("logged");
   const selectedDress = dresses.find((dress) => dress.id === dressID);
   const date = new Date();
   const today = date.toISOString().split("T")[0];
-  console.log(today);
   const [bookingInfo, setBookingInfo] = useState({
     id: dressID,
     date: today,
@@ -18,10 +19,16 @@ function Cart() {
       return { ...prev, date: e.target.value };
     });
   };
+
+  const bookhandle = () => {
+    if (logged) {
+      history.push("./checkout");
+    } else history.push("./Login");
+  };
   return (
     <div>
       <div className="bread-crump">
-        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> / View deal
+        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> / Cart
       </div>
       <div className="cart-container">
         <div className="dress-info">
@@ -46,7 +53,12 @@ function Cart() {
             />
           </div>
 
-          <button className="card-btn book">Book Now</button>
+          <button className="card-btn book" onClick={bookhandle}>
+            Book Now
+          </button>
+        </div>
+        <div className="check-date">
+          <h3>Unavailable Dates</h3>
         </div>
       </div>
     </div>

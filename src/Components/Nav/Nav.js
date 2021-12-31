@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import { BsFillCartFill } from "react-icons/bs";
 import { HiMenu } from "react-icons/hi";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Nav = () => {
+  const history = useHistory();
   const [menuClick, setMenuClick] = useState(false);
   const handlerMenuClick = () => {
     if (menuClick) setMenuClick(false);
     else setMenuClick(true);
+  };
+
+  const cartdirect = () => {
+    history.push("./cart");
   };
 
   const list = () => {
@@ -36,7 +42,7 @@ const Nav = () => {
         </Link>
         <ul className="nav_List">{list()}</ul>
         <div className="nav_Icons">
-          <BsFillCartFill className="cart" />
+          <BsFillCartFill className="cart" onClick={cartdirect} />
           <li>
             <Link to="/login">Login</Link>
           </li>

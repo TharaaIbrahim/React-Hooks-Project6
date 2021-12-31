@@ -6,6 +6,7 @@ import Login from "./Components/Login/Login";
 import Registration from "./Components/Register/Register";
 import Shop from "./Components/Shop/Shop";
 import Cart from "./Components/Cart/Cart";
+import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
       </Switch>
     </Router>
