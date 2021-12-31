@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
 
-function Login() {
+function Login({ setLogged }) {
   const [storedData, setStoredData] = useState({
     email: "",
     password: "",
@@ -34,6 +34,7 @@ function Login() {
             return { ...prev, loginError: "" };
           });
           localStorage.setItem("logged", storedData.email);
+          setLogged(true);
           history.push({
             pathname: "./shop",
           });

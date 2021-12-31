@@ -26,7 +26,6 @@ function Checkout() {
     setDiscountValue(e.target.value);
   };
   const priceDiscount = () => {
-    console.log(discountValue);
     const price = selectedDress.price;
     if (discountValue === "KAL5" && price <= 20) {
       setCauponError("");

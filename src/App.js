@@ -7,17 +7,19 @@ import Registration from "./Components/Register/Register";
 import Shop from "./Components/Shop/Shop";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Checkout/Checkout";
+import { useState } from "react";
 
 function App() {
+  const [logged, setLogged] = useState(localStorage.getItem("logged"));
   return (
     <Router>
-      <Nav></Nav>
+      <Nav logged={logged} setLogged={setLogged} />
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/login">
-          <Login />
+          <Login setLogged={setLogged} />
         </Route>
         <Route path="/register">
           <Registration />

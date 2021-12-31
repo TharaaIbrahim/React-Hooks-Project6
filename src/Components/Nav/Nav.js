@@ -5,14 +5,17 @@ import { BsFillCartFill } from "react-icons/bs";
 import { HiMenu } from "react-icons/hi";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-const Nav = () => {
+const Nav = ({ logged, setLogged }) => {
   const history = useHistory();
   const [menuClick, setMenuClick] = useState(false);
   const handlerMenuClick = () => {
     if (menuClick) setMenuClick(false);
     else setMenuClick(true);
   };
-
+  const logoutHandle = () => {
+    localStorage.removeItem("logged");
+    setLogged(localStorage.getItem(logged));
+  };
   const cartdirect = () => {
     history.push("./cart");
   };
@@ -44,7 +47,13 @@ const Nav = () => {
         <div className="nav_Icons">
           <BsFillCartFill className="cart" onClick={cartdirect} />
           <li>
-            <Link to="/login">Login</Link>
+            {logged ? (
+              <Link to="/" onClick={logoutHandle}>
+                Logout
+              </Link>
+            ) : (
+              <Link to="/login">Login</Link>
+            )}
           </li>
         </div>
         <HiMenu className="menu" onClick={handlerMenuClick} />

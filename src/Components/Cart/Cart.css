@@ -5,10 +5,10 @@
 }
 .check-date {
   width: 20%;
-  height: 63vh;
+  height: 62.5vh;
   box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
   border-radius: 5px;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 .dress-info {
