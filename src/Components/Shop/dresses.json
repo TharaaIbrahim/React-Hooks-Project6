@@ -1,0 +1,66 @@
+[
+  {
+    "id": "0",
+    "title": "Party",
+    "color": "black & silver",
+    "price": "20",
+    "img": "../assest/img/black.jpg",
+    "alt": "Party Black & Silver Dress"
+  },
+  {
+    "id": "1",
+    "title": "Evening",
+    "color": "black",
+    "price": "25",
+    "img": "../assest/img/blackdress.jpg",
+    "alt": "Evening Black Dress"
+  },
+  {
+    "id": "2",
+    "title": "Party",
+    "color": "blue",
+    "price": "23",
+    "img": "../assest/img/bluedress.jpg",
+    "alt": "Party Blue Dress"
+  },
+  {
+    "id": "3",
+    "title": "Prom",
+    "color": "baby blue",
+    "price": "100",
+    "img": "../assest/img/dress baby blue.jpg",
+    "alt": "Prom Baby Blue Dress"
+  },
+  {
+    "id": "4",
+    "title": "Prom",
+    "color": "black & blue",
+    "price": "120",
+    "img": "../assest/img/dress blue.jpg",
+    "alt": "Prom Black Blue Dress"
+  },
+  {
+    "id": "5",
+    "title": "Evening",
+    "color": "turquoise",
+    "price": "15",
+    "img": "../assest/img/dress green.jpg",
+    "alt": "Evening Turquoise Dress"
+  },
+  {
+    "id": "6",
+    "title": "Party",
+    "color": "silver",
+    "price": "50",
+    "img": "../assest/img/dress silder.jpg",
+    "alt": "Party Silver Dress"
+  },
+  {
+    "id": "7",
+    "title": "Prom",
+    "color": "green",
+    "price": "200",
+    "img": "../assest/img/evning-green.png",
+    "alt": "Prom green Dress"
+  }
+]

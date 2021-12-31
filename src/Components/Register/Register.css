@@ -1,16 +1,17 @@
 .register-Form {
   background-image: linear-gradient(var(--primary), var(--nav_color));
   width: 50%;
-  margin: 5% auto;
+  margin: 3% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
+  padding: 3rem;
   box-shadow: 0 4px 8px 0 var(--nav_color);
 }
-.register-Form > h1 {
-  margin-bottom: 2rem;
+.register-Form > p {
+  margin: 1.2rem 0%;
+  width: 50%;
 }
 .register-form_Fields {
   display: flex;
@@ -19,7 +20,7 @@
 }
 .register-form_Fields > input {
   margin-bottom: 1rem;
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 .register-form_btn {
   width: 30%;

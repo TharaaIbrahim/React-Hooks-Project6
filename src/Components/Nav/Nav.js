@@ -21,7 +21,7 @@ const Nav = () => {
           <Link to="#">About us</Link>
         </li>
         <li>
-          <Link to="#">Shop</Link>
+          <Link to="/shop">Shop</Link>
         </li>
       </React.Fragment>
     );
@@ -41,7 +41,7 @@ const Nav = () => {
             <Link to="/login">Login</Link>
           </li>
         </div>
-        <HiMenu class="menu" onClick={handlerMenuClick} />
+        <HiMenu className="menu" onClick={handlerMenuClick} />
       </nav>
       <div className={menuClick ? "burger_Menu" : "hide_Menu"}>{list()}</div>
     </React.Fragment>

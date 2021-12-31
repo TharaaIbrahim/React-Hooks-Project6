@@ -8,6 +8,7 @@ function Registration({ logged, setLogged }) {
     email: "",
     password: "",
     cpassword: "",
+    orders: [],
   });
 
   const dataArr = [];
@@ -56,6 +57,11 @@ function Registration({ logged, setLogged }) {
   return (
     <div className="register-Form">
       <h1>Join Us</h1>
+      <p>
+        <h3>Not our registered customer yet? </h3>
+        While you register,you will be able to rent any dress you like and get
+        special discount
+      </p>
       <form className="register-form_Fields" onSubmit={submitHandler}>
         <label htmlFor="userName">User Name:</label>
         <input
@@ -90,7 +96,7 @@ function Registration({ logged, setLogged }) {
           required
         />
 
-        <label htmlFor="cpassword">Passwrod:</label>
+        <label htmlFor="cpassword">Passwrod Confirm:</label>
         <input
           type="password"
           value={userData.cpassword}

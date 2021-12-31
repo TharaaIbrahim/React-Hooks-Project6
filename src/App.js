@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Registration from "./Components/Register/Register";
+import Shop from "./Components/Shop/Shop";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -18,6 +20,12 @@ function App() {
         </Route>
         <Route path="/register">
           <Registration />
+        </Route>
+        <Route path="/shop">
+          <Shop />
+        </Route>
+        <Route path="/cart">
+          <Cart />
         </Route>
       </Switch>
     </Router>

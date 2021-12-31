@@ -1,11 +1,11 @@
 .hero-bg {
   display: flex;
   align-items: center;
-  background-image: url(../../../../public/assest/img/homebg.jpg);
+  background-image: url(../../../../public/assest/img/shopbg.png);
   background-size: cover;
   background-color: black;
   height: 88vh;
-  opacity: 1;
+  opacity: 0.77;
 }
 .home-title {
   color: var(--primary);

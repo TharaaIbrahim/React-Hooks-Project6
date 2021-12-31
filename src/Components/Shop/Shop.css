@@ -1,0 +1,34 @@
+.shop-container {
+  display: grid;
+  grid-template-areas:
+    "breadCrump breadCrump breadCrump breadCrump"
+    "side shop shop shop ";
+}
+.bread-crump {
+  grid-area: breadCrump;
+  padding: 1rem;
+  font-size: 1.3em;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.205);
+  margin-bottom: 2%;
+}
+.bread-crump > a {
+  color: black !important;
+}
+.bread-crump > a:hover {
+  color: blue !important;
+}
+.shop-side {
+  grid-area: side;
+  margin-left: 5rem;
+  line-height: 2;
+}
+.categories > ul > li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.shop {
+  grid-area: shop;
+  display: grid;
+  grid-template-columns: repeat(3, 18%);
+  justify-content: space-evenly;
+}

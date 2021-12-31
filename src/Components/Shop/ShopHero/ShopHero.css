@@ -1,0 +1,14 @@
+.shop-hero {
+  /* background-image: linear-gradient(var(--primary), var(--nav_color)); */
+  background-image: url(../../../../public/assest/img/homebg.jpg);
+  height: 45vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-hero > h1 {
+  font-size: 5em;
+  letter-spacing: 1.5rem;
+}
