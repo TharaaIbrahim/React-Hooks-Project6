@@ -29,6 +29,6 @@
 .shop {
   grid-area: shop;
   display: grid;
-  grid-template-columns: repeat(3, 18%);
+  grid-template-columns: repeat(3, 20%);
   justify-content: space-evenly;
 }

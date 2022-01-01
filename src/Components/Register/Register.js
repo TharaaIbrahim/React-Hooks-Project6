@@ -10,7 +10,7 @@ function Registration() {
     cpassword: "",
     orders: [],
   });
-
+  const dressID = localStorage.getItem("selectedDress");
   const dataArr = [];
   const history = useHistory();
 
@@ -41,15 +41,8 @@ function Registration() {
         dataArr.push(userData);
         localStorage.setItem("userData", JSON.stringify(dataArr));
       }
-      setUserData({
-        userName: "",
-        email: "",
-        password: "",
-        cpassword: "",
-      });
-
       history.push({
-        pathname: "./list",
+        pathname: "./login",
       });
     }
   };

@@ -3,28 +3,37 @@ import { useState } from "react/cjs/react.development";
 import dresses from "../Shop/dresses.json";
 import { Link } from "react-router-dom";
 import "./Checkout.css";
+import { useHistory } from "react-router-dom";
 
 function Checkout() {
   const logged = localStorage.getItem("logged");
   const dressID = localStorage.getItem("selectedDress");
+  const bookingInfo = JSON.parse(localStorage.getItem("bookingInfo"));
+  const userData = JSON.parse(localStorage.getItem("userData"));
   const selectedDress = dresses.find((dress) => dress.id === dressID);
+  const [discountValue, setDiscountValue] = useState("");
+  const [cauponError, setCauponError] = useState("");
+  const history = useHistory();
   const [checkoutData, setCheckoutData] = useState({
     userName: "",
     email: logged,
     phone: "",
     newPrice: selectedDress.price,
+    id: bookingInfo.id,
+    date: bookingInfo.date,
   });
-  const [discountValue, setDiscountValue] = useState("");
-  const [cauponError, setCauponError] = useState("");
+
   const changeHandler = (e) => {
     const { value, name } = e.target;
     setCheckoutData((prev) => {
       return { ...prev, [name]: value };
     });
   };
+
   const valueHandle = (e) => {
     setDiscountValue(e.target.value);
   };
+
   const priceDiscount = () => {
     const price = selectedDress.price;
     if (discountValue === "KAL5" && price <= 20) {
@@ -46,13 +55,42 @@ function Checkout() {
     } else setCauponError("You Can't Apply This Caupon for this Dress");
   };
 
+  const checkUser = () => {
+    let userIndex;
+    for (const index in userData) {
+      if (userData[index].email === logged) {
+        userIndex = index;
+        break;
+      }
+    }
+    userData[userIndex].orders.push(checkoutData);
+    localStorage.setItem("userData", JSON.stringify(userData));
+  };
+
   const submitHandle = (e) => {
     e.preventDefault();
+    const orders = [];
+
+    if (!localStorage.getItem("allOrders")) {
+      orders.push(JSON.parse(localStorage.getItem("bookingInfo")));
+      localStorage.setItem("allOrders", JSON.stringify(orders));
+    } else {
+      const oldOreders = JSON.parse(localStorage.getItem("allOrders"));
+      oldOreders.push(JSON.parse(localStorage.getItem("bookingInfo")));
+      localStorage.setItem("allOrders", JSON.stringify(oldOreders));
+    }
+    checkUser();
+    localStorage.removeItem("bookingInfo");
+    localStorage.removeItem("selectedDress");
+    history.push({
+      pathname: "./success",
+    });
   };
+
   return (
-    <div>
+    <React.Fragment>
       <div className="bread-crump">
-        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> /{" "}
+        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> /
         <Link to="/cart">Cart</Link> / Checkout
       </div>
       <div className="checkout-container">
@@ -110,7 +148,7 @@ function Checkout() {
           <p className="caupon-error">{cauponError}</p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

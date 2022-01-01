@@ -51,3 +51,16 @@
   background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
   color: var(--primary);
 }
+.checkout-success {
+  margin: 5% auto;
+  width: 50%;
+  padding: 5rem;
+  text-align: center;
+  background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+.checkout-success > img {
+  width: 50%;
+  margin-bottom: 1rem;
+}

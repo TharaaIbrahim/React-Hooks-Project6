@@ -13,6 +13,7 @@ function Login({ setLogged }) {
 
   const history = useHistory();
   const userData = JSON.parse(localStorage.getItem("userData"));
+  const dressID = localStorage.getItem("selectedDress");
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -35,9 +36,14 @@ function Login({ setLogged }) {
           });
           localStorage.setItem("logged", storedData.email);
           setLogged(true);
-          history.push({
-            pathname: "./shop",
-          });
+          if (dressID) {
+            history.push({
+              pathname: "./checkout",
+            });
+          } else
+            history.push({
+              pathname: "./shop",
+            });
         }
       } else {
         setBreakStatus(true);
