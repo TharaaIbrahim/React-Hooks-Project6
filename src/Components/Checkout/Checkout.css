@@ -28,6 +28,12 @@
 .order-summary > img {
   width: 20%;
 }
+.date-summary {
+  line-height: 1.5 !important;
+  background: var(--primary);
+  color: black;
+  border-radius: 10px;
+}
 .checkout {
   margin-top: 1rem;
   width: 50% !important;
@@ -44,7 +50,8 @@
   color: red;
 }
 .apply {
-  padding: 0.2rem;
+  padding: 0.01rem;
+  width: 20%;
   margin-left: 1rem;
 }
 .apply:hover {

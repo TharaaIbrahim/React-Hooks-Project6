@@ -50,3 +50,9 @@
   line-height: 0 !important;
   color: red;
 }
+.empty-cart {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

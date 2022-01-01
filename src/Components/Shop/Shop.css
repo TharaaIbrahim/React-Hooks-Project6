@@ -22,6 +22,9 @@
   margin-left: 5rem;
   line-height: 2;
 }
+.categories {
+  margin-bottom: 1rem;
+}
 .categories > ul > li:hover {
   cursor: pointer;
   text-decoration: underline;

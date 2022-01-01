@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import { BsFillCartFill } from "react-icons/bs";
 import { HiMenu } from "react-icons/hi";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 
 const Nav = ({ logged, setLogged }) => {
   const history = useHistory();
@@ -32,6 +32,11 @@ const Nav = ({ logged, setLogged }) => {
         <li>
           <Link to="/shop">Shop</Link>
         </li>
+        {logged ? (
+          <li>
+            <Link to="/account">Account</Link>
+          </li>
+        ) : null}
       </React.Fragment>
     );
   };

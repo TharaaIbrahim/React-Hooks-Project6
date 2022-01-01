@@ -9,6 +9,7 @@ import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Checkout/Checkout";
 import { useState } from "react";
 import Success from "./Components/Checkout/Success";
+import Account from "./Components/Account/Account";
 
 function App() {
   const [logged, setLogged] = useState(localStorage.getItem("logged"));
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route path="/success">
           <Success />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
       </Switch>
     </Router>

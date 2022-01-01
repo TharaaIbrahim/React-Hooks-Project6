@@ -21,6 +21,7 @@ function Checkout() {
     newPrice: selectedDress.price,
     id: bookingInfo.id,
     date: bookingInfo.date,
+    nextDate: bookingInfo.nextDate,
   });
 
   const changeHandler = (e) => {
@@ -126,16 +127,27 @@ function Checkout() {
             placeholder="077 XXXX XXX"
             required
           />
-          <button className="card-btn checkout">Checkout</button>
+          <p>
+            * <b>Our only payment method is cash</b>
+          </p>
+          <button className="card-btn checkout">
+            Checkout <b>({checkoutData.newPrice} JD)</b>
+          </button>
         </form>
 
         <div className="order-summary">
           <h2>Order Summary :</h2>
           <img src={selectedDress.img} alt={selectedDress.alt} />
-          <h3>
-            {selectedDress.title} - {selectedDress.color} - Dress
-          </h3>
-          <p>{checkoutData.newPrice} JD</p>
+
+          <div className="date-summary">
+            <h3>
+              {selectedDress.title} - {selectedDress.color} - Dress
+            </h3>
+            <p>From: {bookingInfo.date} at 12PM</p>
+            <p>To: {bookingInfo.nextDate} at 12PM</p>
+            <p>{checkoutData.newPrice} JD</p>
+          </div>
+
           <label>Apply Caupon: </label>
           <select value={discountValue} onChange={valueHandle}>
             <option value="">Discount</option>

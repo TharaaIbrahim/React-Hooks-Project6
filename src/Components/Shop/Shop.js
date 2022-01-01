@@ -65,7 +65,7 @@ function Shop() {
         </div>
         <aside className="shop-side">
           <div className="categories">
-            <h3>Categories</h3>
+            <h2>Categories</h2>
             <ul>
               <li onClick={() => categoryHandle("All dresses")}>All Dresses</li>
               <li onClick={() => categoryHandle("Prom")}>Prom Dresses</li>
@@ -75,7 +75,7 @@ function Shop() {
             </ul>
           </div>
           <div className="filter">
-            <h3>Price Filter</h3>
+            <h2>Price Filter</h2>
             <select id="rating-filter" value={value} onChange={handleChange}>
               <option value="Sort">Sort</option>
               <option value="Low price">Low to High</option>

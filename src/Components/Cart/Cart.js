@@ -17,7 +17,6 @@ function Cart() {
   const selectedDress = dresses.find((dress) => dress.id === dressID);
   const allOrders = JSON.parse(localStorage.getItem("allOrders"));
   const date = new Date();
-  // date.setDate(date.getDate() + 1);
   const tomorrow = nextDateFunc(date);
   const nextOfTomorrow = nextDateFunc(tomorrow);
 
@@ -60,57 +59,65 @@ function Cart() {
       localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
     }
   };
-  return (
-    <div>
-      <div className="bread-crump">
-        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> / Cart
-      </div>
-      <div className="cart-container">
-        <div className="dress-info">
-          <h3>Book this Dress</h3>
-          <p>
-            You can rent the dress for 24 hours from 12AM to 12AM from the next
-            day
-          </p>
-          <img src={selectedDress.img} alt={selectedDress.alt} />
-          <h3>
-            {selectedDress.title} - {selectedDress.color} - Dress
-          </h3>
-          <p>{selectedDress.price} JD</p>
-          <div className="date">
-            <label>Pick date: </label>
-            <input
-              type="date"
-              value={bookingInfo.date}
-              min={tomorrow}
-              onChange={dateHandler}
-              required
-            />
-          </div>
-          <p className="date-Error">{dateError}</p>
-          <button className="card-btn book" onClick={bookhandle}>
-            Book Now
-          </button>
+  if (!allOrders) {
+    return (
+      <div>
+        <div className="bread-crump">
+          <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> / Cart
         </div>
-        <div className="check-date">
-          <h3>Unavailable Dates</h3>
-          <div className="unavailableDates">
-            {allOrders &&
-              allOrders.map((order, id) => {
-                if (order.id === dressID) {
-                  return (
-                    <React.Fragment key={id}>
-                      <p>{order.date}</p>
-                      <p>{order.nextDate}</p>
-                    </React.Fragment>
-                  );
-                }
-              })}
+        <div className="cart-container">
+          <div className="dress-info">
+            <h3>Book this Dress</h3>
+            <p>
+              You can rent the dress for 24 hours from 12PM to 12PM from the
+              next day
+            </p>
+            <img src={selectedDress.img} alt={selectedDress.alt} />
+            <h3>
+              {selectedDress.title} - {selectedDress.color} - Dress
+            </h3>
+            <p>{selectedDress.price} JD</p>
+            <div className="date">
+              <label>Pick date: </label>
+              <input
+                type="date"
+                value={bookingInfo.date}
+                min={tomorrow}
+                onChange={dateHandler}
+                required
+              />
+            </div>
+            <p className="date-Error">{dateError}</p>
+            <button className="card-btn book" onClick={bookhandle}>
+              Book Now
+            </button>
+          </div>
+          <div className="check-date">
+            <h3>Unavailable Dates</h3>
+            <div className="unavailableDates">
+              {allOrders &&
+                allOrders.map((order, id) => {
+                  if (order.id === dressID) {
+                    return (
+                      <React.Fragment key={id}>
+                        <p>{order.date}</p>
+                        <p>{order.nextDate}</p>
+                      </React.Fragment>
+                    );
+                  }
+                })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="empty-cart">
+        <img src="../assest/img/cart.png" alt="empty cart" />
+      </div>
+    );
+  }
 }
 
 export default Cart;
