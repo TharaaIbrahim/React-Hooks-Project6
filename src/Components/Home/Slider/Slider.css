@@ -16,8 +16,3 @@
   background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
   color: var(--primary);
 }
-.new-arrival {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 7rem;
-}

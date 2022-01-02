@@ -56,7 +56,7 @@ function Home() {
       </div>
       <div>
         <h2 className="title-sections">What Our Customers Are Saying</h2>
-        <div className="collections-container">
+        <div className="collections-container testcontainer">
           {testimonials.map((testimonial, id) => {
             return (
               <Testimonial

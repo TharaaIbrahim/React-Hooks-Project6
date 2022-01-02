@@ -10,3 +10,9 @@
 .address-nav a {
   color: black !important;
 }
+
+@media screen and (max-width: 450px) {
+  .address-nav {
+    flex-direction: column;
+  }
+}

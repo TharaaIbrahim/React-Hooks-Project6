@@ -10,3 +10,12 @@
   color: lightgray;
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 700px) {
+  .testcontainer {
+    gap: 0rem !important;
+  }
+  .testimonails {
+    width: 50%;
+  }
+}

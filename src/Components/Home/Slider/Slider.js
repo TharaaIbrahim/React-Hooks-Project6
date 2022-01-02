@@ -37,7 +37,7 @@ function Slider() {
   };
   return (
     <div className="new-arrival">
-      <h2>New Arrival</h2>
+      <h2 className="title-sections">New Arrival</h2>
       <div className="img-slider">
         <img src={img.src} alt={img.alt} />
       </div>

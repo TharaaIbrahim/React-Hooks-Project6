@@ -3,15 +3,17 @@
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  margin: 2rem 0;
 }
 .check-date {
   width: 20%;
-  height: 62.5vh;
+  height: 70vh;
   box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .unavailableDates {
   margin-top: 1rem;
@@ -25,6 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 70vh;
   width: 20%;
   box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
   border-radius: 5px;
@@ -32,6 +35,7 @@
 }
 .dress-info > img {
   width: 50%;
+  height: 50vh;
   margin: 1rem 0%;
 }
 .date {
@@ -39,12 +43,7 @@
 }
 .book {
   display: block;
-  transition: 2s;
   margin-top: 1rem;
-}
-.book:hover {
-  transform: scale(1.3);
-  transition: 2s;
 }
 .date-Error {
   line-height: 0 !important;
@@ -55,4 +54,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 770px) {
+  .dress-info,
+  .check-date {
+    width: 30%;
+  }
+  .dress-info > img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cart-container {
+    flex-direction: column-reverse;
+  }
+  .dress-info,
+  .check-date {
+    width: 60%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 }

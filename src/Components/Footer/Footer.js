@@ -6,17 +6,21 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <React.Fragment>
+    <div className="footer-container">
       <div className="footer">
-        <div id="about">
-          <h4> About Us:</h4>
-          <p>
+        <ul id="about">
+          <li>
+            <h4> About Us:</h4>
+          </li>
+          <li>
             We specialize in renting all kinds of dresses, and hepls you to
             shine in all occasions
-          </p>
-        </div>
-        <ul>
-          <h4>Contact Us:</h4>
+          </li>
+        </ul>
+        <ul className="contactus">
+          <li>
+            <h4>Contact Us:</h4>
+          </li>
           <li>
             <BsFillTelephoneFill />
             <p>
@@ -49,7 +53,7 @@ function Footer() {
       <div className="copyright">
         Copyright &copy; 2022 | DressUp Online Shop
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 

@@ -9,9 +9,10 @@
 }
 .home-title {
   color: var(--primary);
-  width: 40%;
-  background-color: rgba(0, 0, 0, 0.3);
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
   margin-left: 1rem;
+  line-height: 1.5;
 }
 .home-title > h1 {
   display: inline;
@@ -21,8 +22,19 @@
   color: var(--primary);
   border-radius: 10px;
   padding: 0.5rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
   border-color: none;
   font-size: 1.2em;
   display: inline;
+  transition: 2s;
+}
+.hero-btn:hover {
+  transform: scale(1.1);
+  transition: 2s;
+}
+@media screen and (max-width: 700px) {
+  .home-title {
+    width: 100%;
+  }
 }

@@ -93,9 +93,9 @@ function Login({ setLogged }) {
             Login
           </button>
           <p>
-            You Don't Have an Account?
+            New User?
             <Link className="register-link" to="/register">
-              Register
+              Create Account Here
             </Link>
           </p>
         </form>

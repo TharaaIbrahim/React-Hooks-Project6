@@ -37,7 +37,7 @@ function Checkout() {
 
   const priceDiscount = () => {
     const price = selectedDress.price;
-    if (discountValue === "KAL5" && price <= 20) {
+    if (discountValue === "KAL5" && price <= 50) {
       setCauponError("");
       setCheckoutData((prev) => {
         return {
@@ -45,12 +45,12 @@ function Checkout() {
           newPrice: price - price * 0.1,
         };
       });
-    } else if (discountValue === "DRESS10" && price > 20) {
+    } else if (discountValue === "DRESS10" && price > 50) {
       setCauponError("");
       setCheckoutData((prev) => {
         return {
           ...prev,
-          newPrice: price - price * 0.3,
+          newPrice: price - price * 0.2,
         };
       });
     } else setCauponError("You Can't Apply This Caupon for this Dress");
@@ -127,7 +127,7 @@ function Checkout() {
             placeholder="077 XXXX XXX"
             required
           />
-          <p>
+          <p className="payment-method">
             * <b>Our only payment method is cash</b>
           </p>
           <button className="card-btn checkout">
@@ -136,7 +136,7 @@ function Checkout() {
         </form>
 
         <div className="order-summary">
-          <h2>Order Summary :</h2>
+          <h2 className="summary-title">Order Summary :</h2>
           <img src={selectedDress.img} alt={selectedDress.alt} />
 
           <div className="date-summary">

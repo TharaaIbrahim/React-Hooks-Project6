@@ -1,8 +1,9 @@
 .caupons-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 150px;
+  grid-template-rows: 1fr;
   box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+  line-height: 2;
 }
 .caupon-20 {
   grid-column: 1 / 2;
@@ -13,19 +14,27 @@
   display: flex;
 }
 .caupon-10 > img {
-  width: 30%;
+  width: 50%;
 }
 .caupon-20 > img {
   width: 50%;
 }
-.caupon-20 > p {
-  width: 50%;
-  font-size: 2em;
-}
+.caupon-20 > p,
 .caupon-10 > p {
-  width: 70%;
-  font-size: 2em;
+  width: 80%;
+  font-size: 1.5em;
+  align-self: center;
 }
 span {
   color: rgb(206, 130, 143);
+}
+
+@media screen and (max-width: 800px) {
+  .caupons-container {
+    line-height: 1.5;
+  }
+  .caupon-20 > p,
+  .caupon-10 > p {
+    font-size: 1em;
+  }
 }

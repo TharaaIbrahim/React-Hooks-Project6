@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   line-height: 2.5;
-  width: 50%;
+  width: 40%;
   padding: 1rem;
 }
 .checkout-form > input {
@@ -36,13 +36,8 @@
 }
 .checkout {
   margin-top: 1rem;
-  width: 50% !important;
+  width: 60% !important;
   align-self: center;
-  transition: 2s;
-}
-.checkout:hover {
-  transform: scale(1.2);
-  transition: 2s;
 }
 .caupon-error {
   line-height: 0 !important;
@@ -51,7 +46,7 @@
 }
 .apply {
   padding: 0.01rem;
-  width: 20%;
+  width: max-content;
   margin-left: 1rem;
 }
 .apply:hover {
@@ -59,15 +54,46 @@
   color: var(--primary);
 }
 .checkout-success {
-  margin: 5% auto;
+  margin: 5% auto 30% auto;
   width: 50%;
-  padding: 5rem;
   text-align: center;
   background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
   color: var(--primary);
   font-size: 1.5rem;
 }
 .checkout-success > img {
-  width: 50%;
+  width: 100%;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+  .checkout-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+  .order-summary {
+    width: 100%;
+    padding: 0rem;
+  }
+  .checkout {
+    width: 100% !important;
+  }
+  .checkout-form {
+    width: 70%;
+  }
+  .payment-method {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .checkout-success {
+    font-size: 1.2rem;
+    margin: 30% auto;
+    width: 100%;
+    padding: 0rem;
+  }
 }

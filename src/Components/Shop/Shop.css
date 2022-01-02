@@ -35,3 +35,21 @@
   grid-template-columns: repeat(3, 20%);
   justify-content: space-evenly;
 }
+@media screen and (max-width: 800px) {
+  .shop {
+    grid-template-columns: repeat(2, 35%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .shop {
+    grid-template-columns: repeat(1, 75%);
+  }
+  .shop-side {
+    margin-left: 1rem;
+  }
+  .shop-container {
+    grid-template-areas:
+      "breadCrump breadCrump "
+      "side shop  ";
+  }
+}

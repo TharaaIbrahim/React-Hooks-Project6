@@ -59,7 +59,7 @@ function Cart() {
       localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
     }
   };
-  if (!allOrders) {
+  if (localStorage.getItem("selectedDress")) {
     return (
       <div>
         <div className="bread-crump">

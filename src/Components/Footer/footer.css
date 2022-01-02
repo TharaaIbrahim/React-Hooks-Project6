@@ -1,8 +1,12 @@
+.footer-container {
+  background-color: var(--nav_color);
+  color: var(--primary);
+  margin-top: 1rem;
+}
 .footer {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--nav_color);
-  color: white;
+  flex-wrap: wrap;
 }
 .footer h4 {
   font-size: 1.3em;
@@ -14,7 +18,7 @@
   align-self: center;
 }
 .footer li {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .icons-footer {
   display: flex;
@@ -24,4 +28,18 @@
 
 .copyright {
   text-align: center;
+  border-top: 1px solid var(--primary);
+}
+/* #about {
+  width: 50%;
+} */
+
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 1rem;
+  }
+  .contactus,
+  #about {
+    width: 100%;
+  }
 }
