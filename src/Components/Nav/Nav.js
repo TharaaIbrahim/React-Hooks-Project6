@@ -27,7 +27,7 @@ const Nav = ({ logged, setLogged }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="#">About us</Link>
+          <a href="#about">About us</a>
         </li>
         <li>
           <Link to="/shop">Shop</Link>

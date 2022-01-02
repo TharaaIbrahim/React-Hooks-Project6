@@ -1,0 +1,20 @@
+.collection-card {
+  width: 29%;
+  box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+}
+.collection-card > img {
+  width: 100%;
+}
+.collections-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+.collection-info {
+  padding: 1rem;
+}
+.title-sections {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 7rem;
+}

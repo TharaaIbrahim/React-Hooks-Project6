@@ -1,0 +1,12 @@
+.address-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.address-nav p {
+  display: inline;
+  margin-left: 1rem;
+  align-self: center;
+}
+.address-nav a {
+  color: black !important;
+}

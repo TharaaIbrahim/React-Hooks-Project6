@@ -5,10 +5,24 @@
   background-size: cover;
   background-color: black;
   height: 88vh;
-  opacity: 0.77;
+  opacity: 0.8;
 }
 .home-title {
   color: var(--primary);
   width: 40%;
-  background-color: rgba(0, 0, 0, 0.205);
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-left: 1rem;
+}
+.home-title > h1 {
+  display: inline;
+}
+.hero-btn {
+  background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
+  color: var(--primary);
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  border-color: none;
+  font-size: 1.2em;
+  display: inline;
 }

@@ -1,45 +1,56 @@
-import React from 'react'
-import './footer.css'
+import React from "react";
+import "./Footer.css";
+import { AiFillInstagram, AiFillFacebook, AiFillMail } from "react-icons/ai";
+import { BsFillTelephoneFill, BsFillPinMapFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+function Footer() {
   return (
-<footer id="footer">
-    <div className="social_media">
-      <ul>
-        <li>
-          <a
-            href="https://www.facebook.com/" rel="noopener"
-          >
-            <i className="fab fa-facebook-square fa-2x facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com" rel="noopener"
-          >
-            <i className="fab fa-linkedin fa-2x linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/" rel="noopener"
-          >
-            <i className="fab fa-github-square fa-2x github"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com" rel="noopener"
-          >
-            <i className="fab fa-youtube fa-2x youtube"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div className="last_services">
-      <p>Full-Stack development</p>
-    </div>
-    <div className="rights"><p> React Group 3 &copy; 2021</p></div>
-  </footer>
-  )
+    <React.Fragment>
+      <div className="footer">
+        <div id="about">
+          <h4> About Us:</h4>
+          <p>
+            We specialize in renting all kinds of dresses, and hepls you to
+            shine in all occasions
+          </p>
+        </div>
+        <ul>
+          <h4>Contact Us:</h4>
+          <li>
+            <BsFillTelephoneFill />
+            <p>
+              <a href="tel:0785708741">0785708741</a>
+            </p>
+          </li>
+          <li>
+            <BsFillPinMapFill />
+            <p> Amman-Jordan-Makeh str-Building 10</p>
+          </li>
+          <ul className="icons-footer">
+            <li>
+              <a href="tharaa9@live.com">
+                <AiFillMail />
+              </a>
+            </li>
+            <li>
+              <Link to="https://www.instagram.com/">
+                <AiFillInstagram />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://www.facebook.com/">
+                <AiFillFacebook />
+              </Link>
+            </li>
+          </ul>
+        </ul>
+      </div>
+      <div className="copyright">
+        Copyright &copy; 2022 | DressUp Online Shop
+      </div>
+    </React.Fragment>
+  );
 }
+
+export default Footer;

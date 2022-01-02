@@ -1,0 +1,12 @@
+.testimonails {
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+  width: 29%;
+  margin-bottom: 5rem;
+  background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
+  color: var(--primary);
+}
+.customer-name {
+  color: lightgray;
+  margin-bottom: 2rem;
+}

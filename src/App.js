@@ -11,10 +11,14 @@ import { useState } from "react";
 import Success from "./Components/Checkout/Success";
 import Account from "./Components/Account/Account";
 
+import Nav2 from "./Components/Home/Nav2/Nav2";
+import Footer from "./Components/Footer/Footer";
+
 function App() {
   const [logged, setLogged] = useState(localStorage.getItem("logged"));
   return (
     <Router>
+      <Nav2 />
       <Nav logged={logged} setLogged={setLogged} />
       <Switch>
         <Route exact path="/">
@@ -42,6 +46,7 @@ function App() {
           <Account />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

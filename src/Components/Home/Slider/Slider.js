@@ -7,7 +7,7 @@ function Slider() {
   let imgAlt = 0;
   const [img, setImg] = useState({
     src: "../assest/img/newarrival.jpg",
-    alt: "shopping",
+    alt: "new arrival",
   });
   const images = [
     "../assest/img/newarrival.jpg",
@@ -16,7 +16,7 @@ function Slider() {
     "../assest/img/bluedress.jpg",
   ];
   const alt = [
-    "shopping",
+    "new arrival",
     "purple long prom dress",
     "silver short party dress",
     "blue short party dress",
@@ -36,8 +36,11 @@ function Slider() {
     setImg({ src: images[imgNum], alt: alt[imgAlt] });
   };
   return (
-    <div className="img-slider">
-      <img src={img.src} alt={img.alt} />{" "}
+    <div className="new-arrival">
+      <h2>New Arrival</h2>
+      <div className="img-slider">
+        <img src={img.src} alt={img.alt} />
+      </div>
     </div>
   );
 }
