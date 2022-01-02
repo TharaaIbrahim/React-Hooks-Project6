@@ -1,0 +1,31 @@
+.caupons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+  grid-template-rows: 150px;
+  box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+}
+.caupon-20 {
+  grid-column: 1 / 2;
+  display: flex;
+}
+.caupon-10 {
+  grid-column: 2/4;
+  display: flex;
+  background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
+  color: white;
+}
+.caupon-10 > img {
+  width: 30%;
+}
+.caupon-20 > img {
+  width: 50%;
+}
+.caupon-20 > p {
+  width: 50%;
+  font-size: 2em;
+}
+.caupon-10 > p {
+  width: 70%;
+  font-size: 2em;
+}
