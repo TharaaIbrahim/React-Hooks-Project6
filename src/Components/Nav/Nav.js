@@ -12,6 +12,7 @@ const Nav = ({ logged, setLogged }) => {
     if (menuClick) setMenuClick(false);
     else setMenuClick(true);
   };
+
   const logoutHandle = () => {
     localStorage.removeItem("logged");
     setLogged(localStorage.getItem(logged));
@@ -24,17 +25,25 @@ const Nav = ({ logged, setLogged }) => {
     return (
       <React.Fragment>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={handlerMenuClick}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="#about">About us</a>
+          <a href="#about" onClick={handlerMenuClick}>
+            About us
+          </a>
         </li>
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/shop" onClick={handlerMenuClick}>
+            Shop
+          </Link>
         </li>
         {logged ? (
           <li>
-            <Link to="/account">Account</Link>
+            <Link to="/account" onClick={handlerMenuClick}>
+              Account
+            </Link>
           </li>
         ) : null}
       </React.Fragment>

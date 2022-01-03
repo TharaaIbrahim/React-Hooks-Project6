@@ -7,15 +7,14 @@ function Caupons() {
       <div className="caupon-20">
         <img src="../assest/img/caupon20.png" alt="caupon off 20%" />
         <p>
-          Apply <span>"DRESS10"</span> Caupon To Get 20% OFF On Dresses Over 50
+          Apply <span>"DRESS10"</span> Caupon To Get 20% OFF On Dresses Over 100
           JD
         </p>
       </div>
       <div className="caupon-10">
         <img src="../assest/img/caupon10.jpg" alt="caupon off 10%" />
         <p>
-          Apply <span>"KAL5"</span> Caupon To Get 10% OFF On Dresses With 50 JD
-          Price Or Less
+          Apply <span>"KAL5"</span> Caupon To Get 10% OFF On Dresses Over 50 JD
         </p>
       </div>
     </div>

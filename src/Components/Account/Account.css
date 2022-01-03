@@ -1,9 +1,8 @@
 .account-hero {
-  height: 10vh;
   color: var(--nav_color);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.205);
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 1em;
 }
 .usericon {
@@ -48,4 +47,25 @@
 }
 .order-info > img {
   width: 20%;
+}
+
+@media screen and (max-width: 850px) {
+  .orders-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .orders-container {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+  .account-hero {
+    letter-spacing: 0em;
+  }
+  .order-info > img {
+    width: 50%;
+  }
+  .order-info h2 {
+    font-size: 1.2em;
+  }
 }

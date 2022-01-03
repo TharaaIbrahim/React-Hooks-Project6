@@ -37,7 +37,7 @@ function Checkout() {
 
   const priceDiscount = () => {
     const price = selectedDress.price;
-    if (discountValue === "KAL5" && price <= 50) {
+    if (discountValue === "KAL5" && price > 50 && price < 100) {
       setCauponError("");
       setCheckoutData((prev) => {
         return {
@@ -45,7 +45,7 @@ function Checkout() {
           newPrice: price - price * 0.1,
         };
       });
-    } else if (discountValue === "DRESS10" && price > 50) {
+    } else if (discountValue === "DRESS10" && price > 100) {
       setCauponError("");
       setCheckoutData((prev) => {
         return {

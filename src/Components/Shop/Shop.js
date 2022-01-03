@@ -33,6 +33,18 @@ function Shop() {
         setDresses(dresses);
     }
   };
+  const sizeHandle = (size) => {
+    switch (size) {
+      case "L":
+        setDresses(arrDresses.filter((dress) => dress.size === "L"));
+        break;
+      case "M":
+        setDresses(arrDresses.filter((dress) => dress.size === "M"));
+        break;
+      case "S":
+        setDresses(arrDresses.filter((dress) => dress.size === "S"));
+    }
+  };
 
   const categoryHandle = (category) => {
     switch (category) {
@@ -65,13 +77,21 @@ function Shop() {
         </div>
         <aside className="shop-side">
           <div className="categories">
-            <h2>Categories</h2>
+            <h2>Collections</h2>
             <ul>
               <li onClick={() => categoryHandle("All dresses")}>All Dresses</li>
               <li onClick={() => categoryHandle("Prom")}>Prom Dresses</li>
               <li onClick={() => categoryHandle("Party")}>Party Dresses</li>
               <li onClick={() => categoryHandle("Evening")}>Evening Dresses</li>
               <li onClick={() => categoryHandle("Wedding")}>Wedding Dresses</li>
+            </ul>
+          </div>
+          <div className="categories">
+            <h2>Sizes</h2>
+            <ul>
+              <li onClick={() => sizeHandle("L")}>Large</li>
+              <li onClick={() => sizeHandle("M")}>Medium</li>
+              <li onClick={() => sizeHandle("S")}>Small</li>
             </ul>
           </div>
           <div className="filter">
@@ -89,6 +109,7 @@ function Shop() {
               <Card
                 title={dress.title}
                 color={dress.color}
+                size={dress.size}
                 src={dress.img}
                 alt={dress.alt}
                 price={dress.price}

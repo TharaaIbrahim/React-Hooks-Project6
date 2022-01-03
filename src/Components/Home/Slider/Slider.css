@@ -16,3 +16,9 @@
   background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
   color: var(--primary);
 }
+
+@media screen and (max-width: 450px) {
+  .img-slider > img {
+    width: 90%;
+  }
+}
