@@ -1,5 +1,4 @@
 .shop-hero {
-  /* background-image: linear-gradient(var(--primary), var(--nav_color)); */
   background-image: url(../../../../public/assest/img/homebg.jpg);
   height: 45vh;
   background-size: cover;
