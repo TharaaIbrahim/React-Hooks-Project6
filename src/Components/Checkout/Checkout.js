@@ -97,7 +97,7 @@ function Checkout() {
         </div>
         <div className="checkout-container">
           <form className="checkout-form" onSubmit={submitHandle}>
-            <h1>Your Order</h1>
+            <h1>Your Reservation</h1>
             <label htmlFor="userName">User Name:</label>
             <input
               type="text"
@@ -137,7 +137,7 @@ function Checkout() {
           </form>
 
           <div className="order-summary">
-            <h2 className="summary-title">Order Summary :</h2>
+            <h2 className="summary-title"> Reservation Summary :</h2>
             <img src={selectedDress.img} alt={selectedDress.alt} />
             <div className="date-summary">
               <h3>

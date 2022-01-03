@@ -19,7 +19,7 @@ function Account() {
         <p>Email: {loggedUserData.email}</p>
       </div>
       <div className="orders-container">
-        <h2>Your Orders</h2>
+        <h2>Your Reservations</h2>
         {orders.map((order, id) => {
           return (
             <div className="order-info" key={id}>

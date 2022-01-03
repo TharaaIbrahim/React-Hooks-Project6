@@ -99,4 +99,7 @@
   .caupon-error {
     font-size: 0.6em;
   }
+  .checkout-form > h1 {
+    font-size: 1.5em;
+  }
 }
