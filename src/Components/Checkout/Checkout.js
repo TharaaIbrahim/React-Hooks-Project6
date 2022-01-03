@@ -4,6 +4,7 @@ import dresses from "../Shop/dresses.json";
 import { Link } from "react-router-dom";
 import "./Checkout.css";
 import { useHistory } from "react-router-dom";
+import Home from "../Home/Home";
 
 function Checkout() {
   const logged = localStorage.getItem("logged");
@@ -87,81 +88,80 @@ function Checkout() {
       pathname: "./success",
     });
   };
-
-  return (
-    <React.Fragment>
-      <div className="bread-crump">
-        <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> /
-        <Link to="/cart">Cart</Link> / Checkout
-      </div>
-      <div className="checkout-container">
-        <form className="checkout-form" onSubmit={submitHandle}>
-          <h1>Your Order</h1>
-          <label htmlFor="userName">User Name:</label>
-          <input
-            type="text"
-            value={checkoutData.userName}
-            name="userName"
-            id="userName"
-            onChange={changeHandler}
-            placeholder="Your Name"
-            required
-          />
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            value={checkoutData.email}
-            name="email"
-            id="email"
-            onChange={changeHandler}
-            placeholder="eg: name@gmail.com"
-            disabled
-          />
-          <label htmlFor="phone">Phone Number</label>
-          <input
-            type="tel"
-            value={checkoutData.phone}
-            name="phone"
-            id="phone"
-            onChange={changeHandler}
-            placeholder="077 XXXX XXX"
-            required
-          />
-          <p className="payment-method">
-            * <b>Our only payment method is cash</b>
-          </p>
-          <button className="card-btn checkout">
-            Checkout <b>({checkoutData.newPrice} JD)</b>
-          </button>
-        </form>
-
-        <div className="order-summary">
-          <h2 className="summary-title">Order Summary :</h2>
-          <img src={selectedDress.img} alt={selectedDress.alt} />
-
-          <div className="date-summary">
-            <h3>
-              {selectedDress.title} - {selectedDress.color} - Dress
-            </h3>
-            <p>From: {bookingInfo.date} at 12PM</p>
-            <p>To: {bookingInfo.nextDate} at 12PM</p>
-            <p>{checkoutData.newPrice} JD</p>
-          </div>
-
-          <label>Apply Caupon: </label>
-          <select value={discountValue} onChange={valueHandle}>
-            <option value="">Discount</option>
-            <option value="DRESS10">DRESS10</option>
-            <option value="KAL5">KAL5</option>
-          </select>
-          <button onClick={priceDiscount} className="apply">
-            Apply
-          </button>
-          <p className="caupon-error">{cauponError}</p>
+  if (localStorage.getItem("bookingInfo")) {
+    return (
+      <React.Fragment>
+        <div className="bread-crump">
+          <Link to="/">Home</Link> / <Link to="/shop">Shop</Link> /
+          <Link to="/cart">Cart</Link> / Checkout
         </div>
-      </div>
-    </React.Fragment>
-  );
+        <div className="checkout-container">
+          <form className="checkout-form" onSubmit={submitHandle}>
+            <h1>Your Order</h1>
+            <label htmlFor="userName">User Name:</label>
+            <input
+              type="text"
+              value={checkoutData.userName}
+              name="userName"
+              id="userName"
+              onChange={changeHandler}
+              placeholder="Your Name"
+              required
+            />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              value={checkoutData.email}
+              name="email"
+              id="email"
+              onChange={changeHandler}
+              placeholder="eg: name@gmail.com"
+              disabled
+            />
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="tel"
+              value={checkoutData.phone}
+              name="phone"
+              id="phone"
+              onChange={changeHandler}
+              placeholder="077 XXXX XXX"
+              required
+            />
+            <p className="payment-method">
+              * <b>Our only payment method is cash</b>
+            </p>
+            <button className="card-btn checkout">
+              Checkout <b>({checkoutData.newPrice} JD)</b>
+            </button>
+          </form>
+
+          <div className="order-summary">
+            <h2 className="summary-title">Order Summary :</h2>
+            <img src={selectedDress.img} alt={selectedDress.alt} />
+            <div className="date-summary">
+              <h3>
+                {selectedDress.title} - {selectedDress.color} - Dress
+              </h3>
+              <p>From: {bookingInfo.date} at 12PM</p>
+              <p>To: {bookingInfo.nextDate} at 12PM</p>
+              <p>{checkoutData.newPrice} JD</p>
+            </div>
+            <label>Apply Caupon: </label>
+            <select value={discountValue} onChange={valueHandle}>
+              <option value="">Discount</option>
+              <option value="DRESS10">DRESS10</option>
+              <option value="KAL5">KAL5</option>
+            </select>
+            <p className="caupon-error">{cauponError}</p>
+            <button onClick={priceDiscount} className="apply">
+              Apply
+            </button>
+          </div>
+        </div>
+      </React.Fragment>
+    );
+  } else return <Home />;
 }
 
 export default Checkout;

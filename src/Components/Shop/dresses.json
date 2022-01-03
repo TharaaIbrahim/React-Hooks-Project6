@@ -13,7 +13,7 @@
     "title": "Evening",
     "color": "black",
     "size": "L",
-    "price": 25,
+    "price": 70,
     "img": "../assest/img/blackdress.jpg",
     "alt": "Evening Black Dress"
   },
@@ -70,5 +70,77 @@
     "price": 200,
     "img": "../assest/img/evning-green.png",
     "alt": "Prom green Dress"
+  },
+  {
+    "id": "8",
+    "title": "Evening",
+    "color": "red",
+    "size": "M",
+    "price": 77,
+    "img": "../assest/img/red-dress.jpg",
+    "alt": "Evening Red Dress"
+  },
+  {
+    "id": "9",
+    "title": "Prom",
+    "color": "purple",
+    "size": "L",
+    "price": 250,
+    "img": "../assest/img/purple.png",
+    "alt": "Prom Purple Dress"
+  },
+  {
+    "id": "10",
+    "title": "Wedding",
+    "color": "off white",
+    "size": "S",
+    "price": 300,
+    "img": "../assest/img/wedding1.jpg",
+    "alt": "Wedding Dress"
+  },
+  {
+    "id": "11",
+    "title": "Wedding",
+    "color": "white",
+    "size": "M",
+    "price": 400,
+    "img": "../assest/img/wedding6.jpg",
+    "alt": "Wedding Dress"
+  },
+  {
+    "id": "12",
+    "title": "Wedding",
+    "color": "white",
+    "size": "L",
+    "price": 450,
+    "img": "../assest/img/wedding.jpg",
+    "alt": "Wedding Dress"
+  },
+  {
+    "id": "12",
+    "title": "Wedding",
+    "color": "white",
+    "size": "M",
+    "price": 356,
+    "img": "../assest/img/wedding4.png",
+    "alt": "Wedding Dress"
+  },
+  {
+    "id": "13",
+    "title": "Wedding",
+    "color": "off white",
+    "size": "L",
+    "price": 275,
+    "img": "../assest/img/wedding5.png",
+    "alt": "Wedding Dress"
+  },
+  {
+    "id": "14",
+    "title": "Prom",
+    "color": "dark purple",
+    "size": "M",
+    "price": 157,
+    "img": "../assest/img/prompurple.jpg",
+    "alt": "Wedding Dress"
   }
 ]

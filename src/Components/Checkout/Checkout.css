@@ -96,4 +96,7 @@
     width: 100%;
     padding: 0rem;
   }
+  .caupon-error {
+    font-size: 0.6em;
+  }
 }

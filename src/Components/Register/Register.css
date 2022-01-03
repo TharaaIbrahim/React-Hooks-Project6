@@ -34,8 +34,26 @@
   background-color: var(--nav_color);
   color: var(--primary);
 }
-#passwordError {
+#passwordError,
+#emailError {
   color: red;
-  text-align: center;
   margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  .register-form_Fields,
+  .register-Form > p {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .register-form_Fields,
+  .register-Form > p {
+    width: 100%;
+  }
+  .register-Form {
+    padding: 1rem;
+    width: 80%;
+    margin: 10% auto;
+  }
 }

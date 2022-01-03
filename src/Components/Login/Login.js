@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import Home from "../Home/Home";
 import "./Login.css";
 
 function Login({ setLogged }) {
@@ -56,52 +57,53 @@ function Login({ setLogged }) {
       }
     });
   };
+  if (!localStorage.getItem("logged")) {
+    return (
+      <div className="login-page">
+        <img
+          className="login-img"
+          src="../assest/img/loginpic.jpg"
+          alt="dresse's sketch"
+        />
+        <div className="Form">
+          <h1>Login</h1>
+          <form className="form_Fields" onSubmit={submitHandler}>
+            <label htmlFor="loginEmail">Email:</label>
+            <input
+              type="email"
+              value={storedData.email}
+              name="email"
+              id="loginEmail"
+              onChange={changeHandler}
+              placeholder="eg: name@gmail.com"
+              required
+            />
 
-  return (
-    <div className="login-page">
-      <img
-        className="login-img"
-        src="../assest/img/loginpic.jpg"
-        alt="dresse's sketch"
-      />
-      <div className="Form">
-        <h1>Login</h1>
-        <form className="form_Fields" onSubmit={submitHandler}>
-          <label htmlFor="loginEmail">Email:</label>
-          <input
-            type="email"
-            value={storedData.email}
-            name="email"
-            id="loginEmail"
-            onChange={changeHandler}
-            placeholder="eg: name@gmail.com"
-            required
-          />
-
-          <label htmlFor="loginPassword">Passwrod:</label>
-          <input
-            type="password"
-            value={storedData.password}
-            name="password"
-            id="loginPassword"
-            onChange={changeHandler}
-            placeholder="eg: rr202"
-            required
-          />
-          <p className="loginError">{storedData.loginError}</p>
-          <button className="form_btn" type="submit">
-            Login
-          </button>
-          <p>
-            New User?
-            <Link className="register-link" to="/register">
-              Create Account Here
-            </Link>
-          </p>
-        </form>
+            <label htmlFor="loginPassword">Passwrod:</label>
+            <input
+              type="password"
+              value={storedData.password}
+              name="password"
+              id="loginPassword"
+              onChange={changeHandler}
+              placeholder="eg: rr202"
+              required
+            />
+            <p className="loginError">{storedData.loginError}</p>
+            <button className="form_btn" type="submit">
+              Login
+            </button>
+            <p>
+              New User?
+              <Link className="register-link" to="/register">
+                Create Account Here
+              </Link>
+            </p>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else return <Home />;
 }
 
 export default Login;

@@ -10,10 +10,9 @@ function Registration() {
     cpassword: "",
     orders: [],
   });
-  const dressID = localStorage.getItem("selectedDress");
   const dataArr = [];
   const history = useHistory();
-
+  const usersData = JSON.parse(localStorage.getItem("userData"));
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setUserData((prev) => {
@@ -28,13 +27,21 @@ function Registration() {
     } else {
       document.getElementById("passwordError").innerText = "";
     }
-  }, [userData.cpassword]);
+  }, [userData.cpassword, userData.password]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (userData.password === userData.cpassword) {
+    let breakCondition = false;
+    usersData.forEach((data) => {
+      if (userData.email === data.email && !breakCondition) {
+        document.getElementById("emailError").innerText =
+          "This Email Has an Account";
+        breakCondition = true;
+      }
+    });
+    if (userData.password === userData.cpassword && !breakCondition) {
       if (localStorage.getItem("userData")) {
-        const newData = JSON.parse(localStorage.getItem("userData"));
+        const newData = usersData;
         newData.push(userData);
         localStorage.setItem("userData", JSON.stringify(newData));
       } else {
@@ -75,7 +82,7 @@ function Registration() {
           placeholder="eg: name@gmail.com"
           required
         />
-
+        <p id="emailError"></p>
         <label htmlFor="password">Passwrod:</label>
         <input
           type="password"

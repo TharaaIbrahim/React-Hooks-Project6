@@ -2,14 +2,14 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "./Card.css";
 
-function Card({ title, src, alt, price, color, size, id, key }) {
+function Card({ title, src, alt, price, color, size, id }) {
   const history = useHistory();
   const selectHandle = (id) => {
     localStorage.setItem("selectedDress", id);
     history.push("./cart");
   };
   return (
-    <div className="card-container" key={key}>
+    <div className="card-container" key={id}>
       <img src={src} alt={alt} />
       <div className="card-info">
         <h3>{title} Dress</h3>

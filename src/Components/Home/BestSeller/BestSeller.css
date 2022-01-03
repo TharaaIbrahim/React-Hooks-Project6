@@ -16,6 +16,9 @@
   padding: 1rem;
   height: 50%;
 }
+.collection-info > p {
+  margin-top: 1rem;
+}
 .title-sections {
   text-align: center;
   font-size: 3em;

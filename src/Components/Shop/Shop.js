@@ -80,10 +80,10 @@ function Shop() {
             <h2>Collections</h2>
             <ul>
               <li onClick={() => categoryHandle("All dresses")}>All Dresses</li>
+              <li onClick={() => categoryHandle("Wedding")}>Wedding Dresses</li>
               <li onClick={() => categoryHandle("Prom")}>Prom Dresses</li>
               <li onClick={() => categoryHandle("Party")}>Party Dresses</li>
               <li onClick={() => categoryHandle("Evening")}>Evening Dresses</li>
-              <li onClick={() => categoryHandle("Wedding")}>Wedding Dresses</li>
             </ul>
           </div>
           <div className="categories">
@@ -106,16 +106,17 @@ function Shop() {
         <div className="shop">
           {arrDresses.map((dress, id) => {
             return (
-              <Card
-                title={dress.title}
-                color={dress.color}
-                size={dress.size}
-                src={dress.img}
-                alt={dress.alt}
-                price={dress.price}
-                key={id}
-                id={dress.id}
-              />
+              <React.Fragment key={id}>
+                <Card
+                  title={dress.title}
+                  color={dress.color}
+                  size={dress.size}
+                  src={dress.img}
+                  alt={dress.alt}
+                  price={dress.price}
+                  id={dress.id}
+                />
+              </React.Fragment>
             );
           })}
         </div>
