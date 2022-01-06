@@ -6,18 +6,20 @@ import Slider from "./Slider/Slider";
 import Testimonial from "./Testimonial/Testimonial";
 
 function Home() {
+  localStorage.removeItem("wedding");
+  localStorage.removeItem("prom");
   const collections = [
     {
       img: "../assest/img/weddingcard.jpg",
       alt: "Wedding Card Collection",
-      title: "Wedding Dresses",
+      title: "Wedding",
       discription:
         "Shop all our wedding dresses & bridal gowns in a wide selection of every style,all at amazing prices. Book an appointment and find your wedding dress",
     },
     {
       img: "../assest/img/promcard.jpg",
       alt: "Prom Card Collection",
-      title: "Prom Dresses",
+      title: "Prom",
       discription:
         "Shop the latest variety of prom dresses in short to long prom gowns.",
     },

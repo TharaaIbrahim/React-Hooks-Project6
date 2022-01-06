@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./DressesCards/Card";
 import "./Shop.css";
 import ShopHero from "./ShopHero/ShopHero";
@@ -6,8 +6,26 @@ import dresses from "./dresses.json";
 import { Link } from "react-router-dom";
 
 function Shop() {
-  const [arrDresses, setDresses] = useState(dresses);
-  const [selectedCategory, setSelectedcategory] = useState("");
+  const [arrDresses, setDresses] = useState(
+    localStorage.getItem("wedding")
+      ? dresses.filter((dress) => dress.title === "Wedding")
+      : localStorage.getItem("prom")
+      ? dresses.filter((dress) => dress.title === "Prom")
+      : dresses
+  );
+  const [selectedCategory, setSelectedcategory] = useState(
+    localStorage.getItem("wedding")
+      ? "Wedding Dresses"
+      : localStorage.getItem("prom")
+      ? "Prom Dresses"
+      : ""
+  );
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
+
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {

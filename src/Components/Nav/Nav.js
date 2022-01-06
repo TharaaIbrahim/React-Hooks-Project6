@@ -11,6 +11,8 @@ const Nav = ({ logged, setLogged }) => {
   const handlerMenuClick = () => {
     if (menuClick) setMenuClick(false);
     else setMenuClick(true);
+    localStorage.removeItem("wedding");
+    localStorage.removeItem("prom");
   };
 
   const logoutHandle = () => {
