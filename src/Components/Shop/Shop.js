@@ -46,9 +46,6 @@ function Shop() {
         );
 
         break;
-
-      default:
-        setDresses(dresses);
     }
   };
   const sizeHandle = (size) => {

@@ -1,9 +1,7 @@
-import React from "react";
-import { useState } from "react/cjs/react.development";
+import React, { useState } from "react";
 import dresses from "../Shop/dresses.json";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Checkout.css";
-import { useHistory } from "react-router-dom";
 import Home from "../Home/Home";
 
 function Checkout() {

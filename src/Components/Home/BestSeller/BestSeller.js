@@ -13,10 +13,14 @@ function BestSeller({ alt, img, collectionName, discription, id }) {
   return (
     <div className="collection-card" key={id} onClick={categorySelect}>
       <img src={img} alt={alt} />
+
+      <div className="overlay"></div>
+
       <div className="collection-info">
         <h3>{collectionName} Dresses</h3>
         <p>{discription}</p>
       </div>
+      <div className="view">View Collection</div>
     </div>
   );
 }

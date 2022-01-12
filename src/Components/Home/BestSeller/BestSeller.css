@@ -1,23 +1,49 @@
+.collections-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
 .collection-card {
   width: 29%;
   height: 50vh;
   box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
   transition: 2s;
+  position: relative;
+}
+.collection-card > img {
+  width: 100%;
+  height: 50%;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+.view {
+  display: none;
 }
 .collection-card:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: 2s;
 }
-.collection-card > img {
-  width: 100%;
-  height: 50%;
+.collection-card:hover .collection-info {
+  display: none;
 }
-.collections-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 2rem;
+.collection-card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
 }
+.collection-card:hover .view {
+  display: block;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2em;
+}
+
 .collection-info {
   padding: 1rem;
   height: 50%;
@@ -31,7 +57,7 @@
   margin-top: 7rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
   .collections-container {
     flex-direction: column;
     align-items: center;
@@ -44,9 +70,10 @@
     font-size: 2em;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 475px) {
   .collection-card {
-    width: 70%;
+    width: 80%;
+    height: 60vh;
   }
   .title-sections {
     font-size: 1.5em;

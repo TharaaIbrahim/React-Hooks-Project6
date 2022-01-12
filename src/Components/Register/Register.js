@@ -13,6 +13,7 @@ function Registration() {
   const dataArr = [];
   const history = useHistory();
   const usersData = JSON.parse(localStorage.getItem("userData"));
+
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setUserData((prev) => {

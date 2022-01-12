@@ -4,7 +4,7 @@ import "./Card.css";
 
 function Card({ title, src, alt, price, color, size, id }) {
   const history = useHistory();
-  const selectHandle = (id) => {
+  const selectHandle = () => {
     localStorage.setItem("selectedDress", id);
     history.push("./cart");
   };
@@ -17,7 +17,7 @@ function Card({ title, src, alt, price, color, size, id }) {
         <p>Size: {size}</p>
         <p>Rent Price: {price} JD</p>
       </div>
-      <button className="card-btn" onClick={() => selectHandle(id)}>
+      <button className="card-btn" onClick={() => selectHandle()}>
         View deal
       </button>
     </div>

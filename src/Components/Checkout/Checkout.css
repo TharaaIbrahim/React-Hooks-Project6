@@ -18,7 +18,7 @@
   padding: 0.5rem;
 }
 .order-summary {
-  line-height: 2.5;
+  line-height: 3.3;
   background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
   color: var(--primary);
   text-align: center;
@@ -45,8 +45,8 @@
   color: red;
 }
 .apply {
-  padding: 0.01rem;
-  width: max-content;
+  padding: 0.5rem;
+  width: 20%;
   margin-left: 1rem;
 }
 .apply:hover {
@@ -71,7 +71,7 @@
     width: 90%;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .checkout-container {
     flex-direction: column;
   }

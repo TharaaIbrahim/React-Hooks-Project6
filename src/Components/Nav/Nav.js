@@ -17,6 +17,7 @@ const Nav = ({ logged, setLogged }) => {
 
   const logoutHandle = () => {
     localStorage.removeItem("logged");
+    localStorage.removeItem("selectedDress");
     setLogged(localStorage.getItem(logged));
   };
   const cartdirect = () => {

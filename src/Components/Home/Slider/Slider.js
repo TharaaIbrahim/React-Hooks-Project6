@@ -19,7 +19,7 @@ function Slider() {
   const alt = [
     "",
     "Wedding Dress",
-    "purple Long Prom Dress",
+    "Purple Long Prom Dress",
     "Dark Pruple Prom Dress",
     "Blue Short Party Dress",
   ];
