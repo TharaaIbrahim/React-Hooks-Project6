@@ -65,7 +65,7 @@ const Nav = ({ logged, setLogged }) => {
           <BsFillCartFill className="cart" onClick={cartdirect} />
           <li>
             {logged ? (
-              <Link to="/" onClick={logoutHandle}>
+              <Link to="/login" onClick={logoutHandle}>
                 Logout
               </Link>
             ) : (
